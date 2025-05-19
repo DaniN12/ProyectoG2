@@ -19,8 +19,13 @@ body {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 /* Estilos del encabezado */
@@ -33,14 +38,38 @@ header {
 }
 
 @keyframes slideDown {
-    from { transform: translateY(-50px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Botón hamburguesa */
+.menu-toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #00E1FF;
+    border: none;
+    color: #4E1E56;
+    font-size: 24px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 1100;
+    display: none;
 }
 
 /* Estilos de la barra de navegación */
 nav {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 15px;
     padding: 10px;
     background: rgba(0, 0, 0, 0.3);
@@ -48,6 +77,15 @@ nav {
     animation: fadeIn 1s 0.5s forwards;
     border-radius: 20px;
     margin-top: -10px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+/* Mostrar el nav en móviles */
+nav.show {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
 }
 
 nav .btn {
@@ -69,6 +107,36 @@ nav .btn:hover {
     transform: scale(1.1);
 }
 
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 200px;
+        height: 100vh;
+        transform: translateX(-100%);
+        opacity: 0;
+        pointer-events: none;
+        background-color: rgba(0, 0, 0, 0.8);
+        border-radius: 0;
+        padding-top: 60px;
+        gap: 20px;
+    }
+
+    nav.show {
+        transform: translateX(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
 /* Estilos para tablas */
 table {
     width: 100%;
@@ -82,7 +150,8 @@ table {
     color: #ffffff;
 }
 
-table th, table td {
+table th,
+table td {
     padding: 15px 20px;
     text-align: left;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -142,11 +211,19 @@ table caption {
 }
 
 @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-#content h2, #content h3 {
+#content h2,
+#content h3 {
     color: #00E1FF;
 }
 
@@ -163,7 +240,8 @@ footer {
 }
 
 /* Ajustes adicionales */
-input[type="text"], input[type="password"] {
+input[type="text"],
+input[type="password"] {
     background: transparent;
     border: none;
     border-bottom: 2px solid #00E1FF;

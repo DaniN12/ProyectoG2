@@ -30,26 +30,34 @@ body {
 
 /* Estilos del encabezado */
 header {
-    font-family: 'Cheri', sans-serif;
-    color: #00E1FF;
-    padding: 40px 20px;
-    font-size: 2em;
-    animation: slideDown 1s forwards;
-}
-
-/* Contenedor interno para mantener el formato original del header */
-.header-content {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px; /* Espacio entre imágenes y título */
+  gap: 20px;
+
+  font-family: 'Cheri', sans-serif;
+  color: #00E1FF;
+  padding: 40px 20px;
+  font-size: 2em;
+  animation: slideDown 1s forwards;
+  position: relative;
 }
 
-/* Imágenes del header */
-.header-img {
-  height: 60px; /* Ajusta el tamaño según tu diseño */
-  width: auto;
+header::before,
+header::after {
+  content: "";
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background-image: url('../image/dash.png');
+  background-size: contain;
+  background-repeat: no-repeat;
 }
+
+header::before {
+  transform: scaleX(-1);
+}
+
 
 
 @keyframes slideDown {

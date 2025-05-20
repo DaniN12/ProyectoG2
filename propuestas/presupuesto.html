@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -14,13 +14,12 @@
             <br>
             <span>PRESUPUESTO</span>
         </h1>
+
+        <button class="menu-toggle" id="menuToggle">&#9776;</button>
+
     </header>
-
-    <button class="menu-toggle" id="menuToggle">&#9776;</button>
-
-    <script src="script.js"></script>
-
-    <nav>
+    
+    <nav id="navMenu">
         <a href="../index.html" class="btn">Inicio</a>
         <a href="contextoyobjetivos.html" class="btn">Contexto y Objetivos</a>
         <a href="planificacion.html" class="btn">Planificación</a>
@@ -44,14 +43,47 @@
                 </tr>
             </thead>
             <tbody>
-                <tr><td>Análisis de modelo de datos conceptual</td><td>Programador senior</td><td>10h</td><td>50€/h</td><td>500€</td></tr>
-                <tr><td>Análisis de modelo de casos de uso</td><td>Programador junior</td><td>10h</td><td>20€/h</td><td>200€</td></tr>
-                <tr><td>Diseño de casos de uso / entidad de datos</td><td>Programador senior</td><td>8h</td><td>50€/h</td><td>400€</td></tr>
-                <tr><td>Diseño detallado del modelo de datos</td><td>Programador senior</td><td>8h</td><td>50€/h</td><td>400€</td></tr>
-                <tr><td>Diseño de arquitectura de software</td><td>Programador senior</td><td>10h</td><td>50€/h</td><td>500€</td></tr>
+                <tr>
+                    <td>Análisis de modelo de datos conceptual</td>
+                    <td>Programador senior</td>
+                    <td>10h</td>
+                    <td>30€/h</td>
+                    <td>300€</td>
+                </tr>
+                <tr>
+                    <td>Análisis de modelo de casos de uso</td>
+                    <td>Programador junior</td>
+                    <td>10h</td>
+                    <td>15€/h</td>
+                    <td>150€</td>
+                </tr>
+                <tr>
+                    <td>Diseño de casos de uso / entidad de datos</td>
+                    <td>Programador senior</td>
+                    <td>8h</td>
+                    <td>30€/h</td>
+                    <td>240€</td>
+                </tr>
+                <tr>
+                    <td>Diseño detallado del modelo de datos</td>
+                    <td>Programador senior</td>
+                    <td>8h</td>
+                    <td>30€/h</td>
+                    <td>240€</td>
+                </tr>
+                <tr>
+                    <td>Diseño de arquitectura de software</td>
+                    <td>Programador senior</td>
+                    <td>10h</td>
+                    <td>30€/h</td>
+                    <td>300€</td>
+                </tr>
             </tbody>
             <tfoot>
-                <tr><td colspan="4"><strong>Total Fase 1</strong></td><td><strong>2.000€</strong></td></tr>
+                <tr>
+                    <td colspan="4"><strong>Total Fase 1</strong></td>
+                    <td><strong>1.230€</strong></td>
+                </tr>
             </tfoot>
         </table>
 
@@ -67,12 +99,33 @@
                 </tr>
             </thead>
             <tbody>
-                <tr><td>Diseño de vistas y navegación</td><td>Diseñadora gráfica</td><td>25h</td><td>30€/h</td><td>750€</td></tr>
-                <tr><td>Diseño de aspecto y comportamiento detallado</td><td>Diseñadora gráfica</td><td>35h</td><td>30€/h</td><td>1.050€</td></tr>
-                <tr><td>Asistencia técnica para adaptar diseño</td><td>Programador junior</td><td>10h</td><td>20€/h</td><td>200€</td></tr>
+                <tr>
+                    <td>Diseño de vistas y navegación</td>
+                    <td>Diseñadora gráfica</td>
+                    <td>25h</td>
+                    <td>20€/h</td>
+                    <td>500€</td>
+                </tr>
+                <tr>
+                    <td>Diseño de aspecto y comportamiento detallado</td>
+                    <td>Diseñadora gráfica</td>
+                    <td>35h</td>
+                    <td>20€/h</td>
+                    <td>700€</td>
+                </tr>
+                <tr>
+                    <td>Asistencia técnica para adaptar diseño</td>
+                    <td>Programador junior</td>
+                    <td>10h</td>
+                    <td>15€/h</td>
+                    <td>150€</td>
+                </tr>
             </tbody>
             <tfoot>
-                <tr><td colspan="4"><strong>Total Fase 2</strong></td><td><strong>2.000€</strong></td></tr>
+                <tr>
+                    <td colspan="4"><strong>Total Fase 2</strong></td>
+                    <td><strong>1.350€</strong></td>
+                </tr>
             </tfoot>
         </table>
 
@@ -88,15 +141,54 @@
                 </tr>
             </thead>
             <tbody>
-                <tr><td>Desarrollo de entidades JPA</td><td>Junior + Senior</td><td>50h (25+25)</td><td>20€/h + 50€/h</td><td>1.750€</td></tr>
-                <tr><td>Desarrollo de servicio RESTful</td><td>Programador senior</td><td>40h</td><td>50€/h</td><td>2.000€</td></tr>
-                <tr><td>Prueba y corrección de servicio</td><td>Programador junior</td><td>30h</td><td>20€/h</td><td>600€</td></tr>
-                <tr><td>Desarrollo cliente RESTful</td><td>Programador senior</td><td>30h</td><td>50€/h</td><td>1.500€</td></tr>
-                <tr><td>Desarrollo modelo de datos cliente</td><td>Programador junior</td><td>30h</td><td>20€/h</td><td>600€</td></tr>
-                <tr><td>Desarrollo vistas UI (apoyado en diseño)</td><td>Junior + Diseñadora</td><td>30h + 20h</td><td>600€ + 600€</td><td>1.200€</td></tr>
+                <tr>
+                    <td>Desarrollo de entidades JPA</td>
+                    <td>Junior + Senior</td>
+                    <td>25h + 25h</td>
+                    <td>15€/h + 30€/h</td>
+                    <td>1.125€</td>
+                </tr>
+                <tr>
+                    <td>Desarrollo de servicio RESTful</td>
+                    <td>Programador senior</td>
+                    <td>40h</td>
+                    <td>30€/h</td>
+                    <td>1.200€</td>
+                </tr>
+                <tr>
+                    <td>Prueba y corrección de servicio</td>
+                    <td>Programador junior</td>
+                    <td>30h</td>
+                    <td>15€/h</td>
+                    <td>450€</td>
+                </tr>
+                <tr>
+                    <td>Desarrollo cliente RESTful</td>
+                    <td>Programador senior</td>
+                    <td>30h</td>
+                    <td>30€/h</td>
+                    <td>900€</td>
+                </tr>
+                <tr>
+                    <td>Desarrollo modelo de datos cliente</td>
+                    <td>Programador junior</td>
+                    <td>30h</td>
+                    <td>15€/h</td>
+                    <td>450€</td>
+                </tr>
+                <tr>
+                    <td>Desarrollo vistas UI (apoyado en diseño)</td>
+                    <td>Junior + Diseñadora</td>
+                    <td>30h + 20h</td>
+                    <td>450€ + 400€</td>
+                    <td>850€</td>
+                </tr>
             </tbody>
             <tfoot>
-                <tr><td colspan="4"><strong>Total Fase 3</strong></td><td><strong>7.650€</strong></td></tr>
+                <tr>
+                    <td colspan="4"><strong>Total Fase 3</strong></td>
+                    <td><strong>4.975€</strong></td>
+                </tr>
             </tfoot>
         </table>
 
@@ -112,12 +204,33 @@
                 </tr>
             </thead>
             <tbody>
-                <tr><td>Pruebas cliente/servidor por WP</td><td>Programador junior</td><td>20h</td><td>20€/h</td><td>400€</td></tr>
-                <tr><td>Pruebas de integración general</td><td>Programador senior</td><td>15h</td><td>50€/h</td><td>750€</td></tr>
-                <tr><td>Manual de usuario</td><td>Diseñadora + Junior</td><td>10h + 5h</td><td>300€ + 100€</td><td>400€</td></tr>
+                <tr>
+                    <td>Pruebas cliente/servidor por WP</td>
+                    <td>Programador junior</td>
+                    <td>20h</td>
+                    <td>15€/h</td>
+                    <td>300€</td>
+                </tr>
+                <tr>
+                    <td>Pruebas de integración general</td>
+                    <td>Programador senior</td>
+                    <td>15h</td>
+                    <td>30€/h</td>
+                    <td>450€</td>
+                </tr>
+                <tr>
+                    <td>Manual de usuario</td>
+                    <td>Diseñadora + Junior</td>
+                    <td>10h + 5h</td>
+                    <td>200€ + 75€</td>
+                    <td>275€</td>
+                </tr>
             </tbody>
             <tfoot>
-                <tr><td colspan="4"><strong>Total Fase 4</strong></td><td><strong>1.550€</strong></td></tr>
+                <tr>
+                    <td colspan="4"><strong>Total Fase 4</strong></td>
+                    <td><strong>1.025€</strong></td>
+                </tr>
             </tfoot>
         </table>
 
@@ -133,11 +246,26 @@
                 </tr>
             </thead>
             <tbody>
-                <tr><td>Empaquetado de aplicaciones</td><td>Programador junior</td><td>10h</td><td>20€/h</td><td>200€</td></tr>
-                <tr><td>Preparación de entregables</td><td>Senior + Diseño + Marketing</td><td>5h + 5h + 5h</td><td>250€ + 150€ + 250€</td><td>650€</td></tr>
+                <tr>
+                    <td>Empaquetado de aplicaciones</td>
+                    <td>Programador junior</td>
+                    <td>10h</td>
+                    <td>15€/h</td>
+                    <td>150€</td>
+                </tr>
+                <tr>
+                    <td>Preparación de entregables</td>
+                    <td>Senior + Diseño + Marketing</td>
+                    <td>5h + 5h + 5h</td>
+                    <td>150€ + 100€ + 175€</td>
+                    <td>425€</td>
+                </tr>
             </tbody>
             <tfoot>
-                <tr><td colspan="4"><strong>Total Fase 5</strong></td><td><strong>850€</strong></td></tr>
+                <tr>
+                    <td colspan="4"><strong>Total Fase 5</strong></td>
+                    <td><strong>575€</strong></td>
+                </tr>
             </tfoot>
         </table>
 
@@ -153,13 +281,22 @@
                 </tr>
             </thead>
             <tbody>
-                <tr><td>Branding, naming y presentación</td><td>Manager marketing</td><td>10h</td><td>50€/h</td><td>500€</td></tr>
+                <tr>
+                    <td>Branding, naming y presentación</td>
+                    <td>Manager marketing</td>
+                    <td>10h</td>
+                    <td>35€/h</td>
+                    <td>350€</td>
+                </tr>
             </tbody>
         </table>
         <div class="presupuesto-total">
-        <p style="margin-right: 20px;">Total Global: <strong>14.550€</strong></p>
+            <p style="margin-right: 20px;">Total Global: <strong>9.505€</strong></p>
         </div>
     </section>
+
+    <script src="../script.js"></script>
+
     <footer>
         <p>&copy; 2024 PROYECTORIUM. Todos los derechos reservados.</p>
     </footer>

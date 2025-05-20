@@ -31,13 +31,12 @@ body {
 /* Estilos del encabezado */
 header {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   gap: 20px;
-
   font-family: 'Cheri', sans-serif;
   color: #00E1FF;
-  padding: 40px 20px;
+  padding: 40px 20px 20px 20px;
   font-size: 2em;
   animation: slideDown 1s forwards;
   position: relative;
@@ -58,7 +57,28 @@ header::before {
   transform: scaleX(-1);
 }
 
+h1{
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+}
 
+h1 span{
+    color:#fff;
+    font-size:40px;
+}
+
+h1.inicio{
+  margin-top: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+h1.inicio span{    
+    display: inline-block;
+    font-size:inherit;
+    padding-right:20px;
+}
 
 @keyframes slideDown {
     from {
@@ -102,6 +122,7 @@ nav {
     margin-top: -10px;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
     z-index: 1000;
+    margin:0 1em;
 }
 
 /* Mostrar el nav en móviles */
@@ -128,6 +149,27 @@ nav .btn:hover {
     color: #4E1E56;
     border: 2px solid #00E1FF;
     transform: scale(1.1);
+}
+
+nav .btn.active{
+    background-color: #05B9D1;
+    color: #fff;
+    border-color: #05B9D1;;
+}
+
+.presupuesto-total {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1s 0.5s forwards;
+    border-radius: 20px;
+    margin-top: -10px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    z-index: 1000;
 }
 
 @media (max-width: 768px) {
@@ -165,12 +207,12 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin: 30px 0;
-    background: rgba(0, 0, 0, 0.4);
+    /* background: rgba(0, 0, 0, 0.4); */
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     animation: fadeInUp 1s forwards;
-    color: #ffffff;
+    color: #333;
 }
 
 table th,
@@ -182,19 +224,19 @@ table td {
 }
 
 table th {
-    background: #00E1FF;
-    color: #4E1E56;
+    background: #05B9D1;
+    color: #fff;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
 table tbody tr:nth-child(even) {
-    background: rgba(255, 255, 255, 0.1);
+    background: #f8f8f8;
 }
 
 table tbody tr:hover {
-    background-color: rgba(0, 225, 255, 0.3);
+    background-color: rgba(156, 231, 241, 0.3);
     transition: background-color 0.3s ease;
 }
 
@@ -203,7 +245,7 @@ table tbody tr:last-child td {
 }
 
 table td strong {
-    color: #00E1FF;
+    color: #05B9D1;
 }
 
 table caption {
@@ -223,7 +265,7 @@ table caption {
     width: 90%;
     margin: 0 auto;
     line-height: 1.6;
-    background: rgba(0, 0, 0, 0.4);
+    background: #fff;
     border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     opacity: 0;
@@ -231,6 +273,7 @@ table caption {
     animation: fadeInUp 1s 0.7s forwards;
     margin-top: 20px;
     margin-bottom: 20px;
+    color: #333;
 }
 
 @keyframes fadeInUp {
@@ -247,7 +290,7 @@ table caption {
 
 #content h2,
 #content h3 {
-    color: #00E1FF;
+    color: #05B9D1;
 }
 
 /* Estilos del pie de página */

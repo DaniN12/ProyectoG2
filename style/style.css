@@ -37,6 +37,21 @@ header {
     animation: slideDown 1s forwards;
 }
 
+/* Contenedor interno para mantener el formato original del header */
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; /* Espacio entre imágenes y título */
+}
+
+/* Imágenes del header */
+.header-img {
+  height: 60px; /* Ajusta el tamaño según tu diseño */
+  width: auto;
+}
+
+
 @keyframes slideDown {
     from {
         transform: translateY(-50px);

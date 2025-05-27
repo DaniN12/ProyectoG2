@@ -1,5 +1,6 @@
-/* Estilos generales */
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css");
+
+/* Estilos generales */
 @font-face {
     font-family: 'Cheri';
     src: url('CHERI___.TTF') format('truetype');
@@ -173,7 +174,7 @@ nav .btn.active {
     z-index: 1000;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
     .menu-toggle {
         display: block;
     }

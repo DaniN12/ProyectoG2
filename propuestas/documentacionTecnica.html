@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROYECTORIUM - Planificación</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="icon" href="../image/icon.png" type="image/png">
+</head>
+
+<body>
+    <header>
+        <h1>PROYECTORIUM
+            <br>
+            <span>DOCUMENTACIÓN TÉCNICA</span>
+        </h1>
+        
+    <button class="menu-toggle" id="menuToggle">&#9776;</button>
+
+    </header>
+
+    <nav id="navMenu">
+        <a href="../index.html" class="btn"><i class="fa-solid fa-house"></i> Inicio</a>
+        <a href="contextoyobjetivos.html" class="btn"><i class="fa-solid fa-bullseye"></i> Contexto y Objetivos</a>
+        <a href="planificacion.html" class="btn"><i class="fa-solid fa-calendar-check"></i> Planificación</a>
+        <a href="recursos.html" class="btn"><i class="fa-solid fa-boxes-stacked"></i> Recursos</a>
+        <a href="presupuesto.html" class="btn"><i class="fa-solid fa-file-invoice-dollar"></i> Presupuesto</a>
+        <a href="seguimientoyevaluacion.html" class="btn"><i class="fa-solid fa-chart-line"></i> Seguimiento y Evaluación</a>
+        <a href="documentacionTecnica.html" class="btn active"><i class="fa-solid fa-gear"></i> Documentación técnica</a>
+    </nav>
+
+   <section id="content">
+        <h2><i class="fa-solid fa-file-code"></i> Documentación Técnica</h2>
+
+        <h3><i class="fa-solid fa-circle-info"></i> 1. Introducción</h3>
+        <p>
+            Proyectorium es una aplicación de escritorio desarrollada en JavaFX para la gestión eficiente de un cine.
+            Su objetivo es mejorar la experiencia tanto para los clientes como para los trabajadores del cine.
+            Los clientes podrán consultar la cartelera, adquirir entradas electrónicas y obtener información de las películas,
+            mientras que el personal contará con herramientas para la administración del cine, incluyendo películas, proveedores y categorías.
+        </p>
+
+       <h3><i class="fa-solid fa-bullseye"></i> 2. Objetivos</h3>
+<ul>
+    <li>Crear una aplicación intuitiva y accesible para los clientes del cine.</li>
+    <li>Ofrecer a los empleados una plataforma para la gestión de datos clave del cine.</li>
+</ul>
+
+<h4><i class="fa-solid fa-list-check"></i> Objetivos Específicos</h4>
+<ul>
+    <li>Gestión de la cartelera: Mostrar películas, horarios, duración y clasificación por edades.</li>
+    <li>Gestión de categorías: Mostrar categorías con fecha de creación y clasificación por edades.</li>
+    <li>Gestión de proveedores: Mostrar información contractual y personal de proveedores.</li>
+    <li>Generación de entradas: Crear tickets electrónicos únicos y seguros.</li>
+    <li>Gestión de usuarios: Control de acceso con roles (administrador y vendedor).</li>
+    <li>Seguridad y validación: Validaciones para prevenir errores y fraudes.</li>
+</ul>
+
+    <h3><i class="fa-solid fa-diagram-project"></i> 2.2. Especificación de Casos de Uso (Jerarquizada)</h3>
+
+    <h4>2.2.1. Casos de uso - Gestión de Cartelera</h4>
+    <ul>
+        <li>Ver cartelera.</li>
+        <li>Filtrar por categoría o fecha.</li>
+        <li>Consultar detalles de película.</li>
+    </ul>
+
+    <h4>2.2.2. Casos de uso - Gestión de Películas</h4>
+    <ul>
+        <li>Agregar película.</li>
+        <li>Editar película.</li>
+        <li>Eliminar película.</li>
+        <li>Asignar categoría y proveedor.</li>
+    </ul>
+
+    <h4>2.2.3. Casos de uso - Gestión de Categorías</h4>
+    <ul>
+        <li>Crear nueva categoría.</li>
+        <li>Editar categoría.</li>
+        <li>Consultar categorías existentes.</li>
+    </ul>
+
+    <h4>2.2.4. Casos de uso - Gestión de Proveedores</h4>
+    <ul>
+        <li>Registrar proveedor.</li>
+        <li>Editar datos del proveedor.</li>
+        <li>Consultar contratos vigentes.</li>
+    </ul>
+
+    <h4>2.2.5. Casos de uso - Gestión de Entradas</h4>
+    <ul>
+        <li>Generar ticket electrónico.</li>
+        <li>Validar entrada en taquilla.</li>
+        <li>Consultar historial de compras.</li>
+    </ul>
+
+    <h4>2.2.6. Casos de uso - Gestión de Usuarios</h4>
+    <ul>
+        <li>Iniciar sesión con autenticación.</li>
+        <li>Registrar vendedor o administrador (solo por administrador).</li>
+        <li>Asignar roles.</li>
+    </ul>
+
+    <h3><i class="fa-solid fa-database"></i> 2.3. Modelo conceptual de datos</h3>
+        <p>Este apartado incluye un diagrama ER con las siguientes entidades principales:</p>
+        <ul>
+            <li>Usuario (1) ── (N) Ticket</li>
+            <li>Película (1) ── (N) Ticket</li>
+            <li>Categorías (N) ── (M) Películas</li>
+            <li>Proveedor (1) ── (N) Películas</li>
+        </ul>
+        <p><strong>Atributos clave:</strong></p>
+        <ul>
+            <li><strong>Película:</strong> título, duración, clasificación, sinopsis.</li>
+            <li><strong>Categoría:</strong> nombre, edad mínima, fecha de creación.</li>
+            <li><strong>Proveedor:</strong> nombre, contrato, inicio/fin, contacto.</li>
+            <li><strong>Ticket:</strong> ID, código ,precio.</li>
+            <li><strong>Usuario:</strong> Tipo, email.</li>
+        </ul>
+
+        <h3><i class="fa-solid fa-network-wired"></i> 2.4. Arquitectura de software de la solución</h3>
+        <ul>
+            <li><strong>Arquitectura:</strong> Cliente-Servidor</li>
+            <li><strong>Patrón de diseño:</strong> Modelo-Vista-Controlador (MVC)</li>
+            <li><strong>Frontend:</strong> JavaFX</li>
+            <li><strong>Backend:</strong> Java EE / RESTful Services</li>
+            <li><strong>Base de datos:</strong> MySQL o SQLite</li>
+            <li><strong>Seguridad:</strong> Hash de contraseñas, autenticación con roles</li>
+            <li><strong>Comunicación:</strong> Cliente REST y servidor RESTful</li>
+            <li><strong>Herramientas:</strong> Git, Maven, Scene Builder</li>
+        </ul>
+
+    <h3><i class="fa-solid fa-star"></i> 3. Funcionalidades</h3>
+        <h4><i class="fa-solid fa-user"></i> Para Usuarios</h4>
+        <ul>
+            <li>Registro e inicio de sesión.</li>
+            <li>Consulta de cartelera.</li>
+            <li>Selección de asientos y compra de tickets.</li>
+            <li>Visualización de historial de compras.</li>
+        </ul>
+
+        <h4><i class="fa-solid fa-user-shield"></i> Para Administradores</h4>
+        <ul>
+            <li>Gestión de películas (agregar, modificar, eliminar).</li>
+            <li>Configuración de salas y horarios.</li>
+            <li>Generación de reportes de ventas y ocupación.</li>
+        </ul>
+
+        <h3><i class="fa-solid fa-tools"></i> 4. Tecnologías a Utilizar</h3>
+        <ul>
+            <li><strong>Lenguaje:</strong> Java 8</li>
+            <li><strong>Framework:</strong> JavaFX</li>
+            <li><strong>Base de datos:</strong> MySQL / SQLite</li>
+            <li><strong>Herramientas:</strong> Scene Builder, Maven, Git</li>
+        </ul>
+
+        <h3><i class="fa-solid fa-sitemap"></i> 5. Arquitectura del Sistema</h3>
+        <ul>
+            <li><strong>Patrón de diseño:</strong> Modelo-Vista-Controlador (MVC)</li>
+            <li><strong>Base de datos:</strong> Tablas para usuarios, películas, tickets y proveedores.</li>
+            <li><strong>Seguridad:</strong> Hash de contraseñas y control por roles.</li>
+        </ul>
+
+        <h3><i class="fa-solid fa-calendar-alt"></i> 6. Cronograma de Desarrollo</h3>
+
+        <h4>Primera fase (18/11/2024 - 22/11/2024)</h4>
+        <ul>
+            <li>Análisis del modelo de datos conceptual.</li>
+            <li>Análisis del modelo de casos de uso.</li>
+            <li>Diseño de casos de uso y entidades de datos.</li>
+            <li>Diseño detallado del modelo de datos.</li>
+            <li>Diseño de la arquitectura de software.</li>
+        </ul>
+
+        <h4>Tercera fase (25/11/2024 - 06/12/2024)</h4>
+        <ul>
+            <li>Diseño de la UI: vistas y navegación.</li>
+            <li>Diseño de la UI: aspecto y comportamiento detallado de vistas.</li>
+        </ul>
+
+        <h4>Cuarta fase (09/12/2024 - 24/01/2025)</h4>
+        <ul>
+            <li>Desarrollo de clases JPA y definición de queries.</li>
+            <li>Desarrollo de servicio RESTful y fachada abstracta o EJB.</li>
+            <li>Pruebas de servicios y acceso a datos en servidor Java EE.</li>
+            <li>Desarrollo del cliente RESTful.</li>
+            <li>Desarrollo del modelo de datos del lado cliente.</li>
+            <li>Desarrollo de vistas de la UI.</li>
+        </ul>
+
+        <h4>Quinta fase (27/01/2025 - 31/01/2025)</h4>
+        <ul>
+            <li>Prueba integrada cliente/servidor y desarrollo correctivo.</li>
+            <li>Prueba integrada de todos los componentes.</li>
+            <li>Desarrollo del manual de usuario.</li>
+        </ul>
+
+        <h4>Sexta fase (03/02/2025 - 07/02/2025)</h4>
+        <ul>
+            <li>Empaquetado de la aplicación.</li>
+            <li>Preparación de entregables finales.</li>
+        </ul>
+
+        <h3><i class="fa-solid fa-circle-check"></i> 7. Conclusión</h3>
+        <p>
+            Proyectorium es una solución integral que busca mejorar la experiencia del cliente en el cine
+            y optimizar la gestión operativa mediante tecnología moderna, segura y escalable.
+        </p>
+    </section>
+
+    <script src="../script.js"></script>
+
+    <footer>
+        <p>&copy; 2024 PROYECTORIUM. Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+</html>

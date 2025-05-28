@@ -364,7 +364,7 @@ input::placeholder {
 }
 
 .imagen-contexto {
-    flex: 1 1 300px;
+    flex: 1 1;
     display: flex;
     justify-content: center;
 }
